@@ -1,3 +1,11 @@
+// |----------------------------------|
+// |      AUTORES DO PROJETO:         |
+// |----------------------------------|
+// | - MARCO VINICIUS DA COSTA BUSATO |
+// | - FELYPE MOLINARI                |
+// | - LAURA FERRARI HECKMANN         |
+// |----------------------------------|
+
 #include <iostream>
 #include <stdlib.h>
 #include <locale.h>
@@ -11,7 +19,7 @@ int main()
     // Declaração de variáveis (validação de CPF).
     long long CPF;
     int n1, n2, n3, n4, n5, n6, n7, n8, n9; // Números individualizados do CPF do eleitor.
-    bool volteAoInicio; // Variável de controle.
+    bool volteAoInicio = false; // Variável de controle.
 
     // Declaração de variáveis de contagem (finalização da votação)
     int contEleitores = 0;
@@ -369,5 +377,4 @@ int main()
         }
     }
     while (volteAoInicio == true);
-    return 0;
 }

@@ -92,7 +92,7 @@ int main()
             string segTurnPres1;
             string segTurnPres2;
 
-            system("CLS");
+            system("clear");
             cout << "------------------------------------------------------------------------------------------------ \n" << endl;
             cout << "VOTAÇÃO FINALIZADA. \n" << endl;
             cout << "Total de eleitores: " << contEleitores << "\n" << endl;
@@ -162,6 +162,7 @@ int main()
                     cout << "RESULTADO - GOVERNADOR: \n" << endl;
                     cout << "Haverá segundo turno - Os candidatos a GOVERNADOR que concorrerão são: \n" << endl;
 
+                    // Situação caso todos tenham a mesma quantidade de votos (validação por idade).
                     if (validosGov1 == validosGov2 && validosGov1 == validosGov3) {
 
                         if (idadeGov1 > idadeGov2 && idadeGov1 > idadeGov3) {
@@ -195,6 +196,7 @@ int main()
                         }
                     }
 
+                    // Situação caso dois candidatos tenham a mesma quantidade de votos (maior que o terceiro).
                     if (validosGov1 == validosGov2 && validosGov1 > validosGov3) {
 
                         if (idadeGov1 > idadeGov2) {
@@ -234,6 +236,7 @@ int main()
                         }
                     }
 
+                    // Situação em que um candidato possui mais voto que os demais.
                     if (validosGov1 > validosGov2 && validosGov1 > validosGov3) {
                         segTurnGov1 = "Jorge da Silva (20)";
 
@@ -319,6 +322,7 @@ int main()
                     cout << "RESULTADO - PRESIDENTE: \n" << endl;
                     cout << "Haverá segundo turno - Os candidatos que concorrerão a PRESIDENTE são: \n" << endl;
 
+                    // Situação caso todos tenham a mesma quantidade de votos (validação por idade).
                     if (validosPres1 == validosPres2 && validosPres1 == validosPres3) {
 
                         if (idadePres1 > idadePres2 && idadePres1 > idadePres3) {
@@ -352,6 +356,7 @@ int main()
                         }
                     }
 
+                    // Situação caso dois candidatos tenham a mesma quantidade de votos (maior que o terceiro).
                     if (validosPres1 == validosPres2 && validosPres1 > validosPres3) {
 
                         if (idadePres1 > idadePres2) {
@@ -412,6 +417,7 @@ int main()
                         }
                     }
 
+                    // Situação em que um candidato possui mais voto que os demais.
                     if (validosPres2 > validosPres1 && validosPres2 > validosPres3) {
                         segTurnPres1 = "Agenor Brasil (34)";
 
@@ -523,7 +529,7 @@ int main()
         // Início da votação (caso os dígitos verificadores inseridos no CPF correspondam ao resultado da verificação matemática).
         if (digito1 == digVerif1 && digito2 == digVerif2) {
 
-            system("CLS");
+            system("clear");
 
             cout << "VOTAÇÃO INICIADA. \n" << endl;
 
@@ -542,7 +548,7 @@ int main()
             else if (votoGov == 0) { contGovBranco++; }
             else { contGovNulo++; }
 
-            system("CLS");
+            system("clear");
 
             cout << "Escolha um candidato a PRESIDENTE: \n" << endl;
             cout << "Renato Junior (20)" << endl;
@@ -562,7 +568,7 @@ int main()
             // Contagem de eleitores.
             contEleitores++;
 
-            system("CLS");
+            system("clear");
 
             // Booleano que valida a condição while e volta ao início, permitindo que um novo eleitor vote.
             volteAoInicio = true;

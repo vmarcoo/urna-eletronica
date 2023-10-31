@@ -19,9 +19,9 @@ int main()
     // Declaração de variáveis (validação de CPF).
     long long CPF;
     int n1, n2, n3, n4, n5, n6, n7, n8, n9; // Números individualizados do CPF do eleitor.
-    bool volteAoInicio = false; // Variável de controle.
+    bool volteAoInicio = true; // Variável de controle.
 
-    // Declaração de variáveis de contagem (finalização da votação)
+    // Declaração de variáveis de contagem (finalização da votação).
     int contEleitores = 0;
 
     int votoGov;
@@ -92,7 +92,7 @@ int main()
             string segTurnPres1;
             string segTurnPres2;
 
-            system("clear");
+            system("CLS");
             cout << "------------------------------------------------------------------------------------------------ \n" << endl;
             cout << "VOTAÇÃO FINALIZADA. \n" << endl;
             cout << "Total de eleitores: " << contEleitores << "\n" << endl;
@@ -199,41 +199,20 @@ int main()
                     // Situação caso dois candidatos tenham a mesma quantidade de votos (maior que o terceiro).
                     if (validosGov1 == validosGov2 && validosGov1 > validosGov3) {
 
-                        if (idadeGov1 > idadeGov2) {
-                            segTurnGov1 = "Jorge da Silva (20)";
-                            segTurnGov2 = "Caio César Moreira (34)";
-                        }
-
-                        else {
-                            segTurnGov1 = "Caio César Moreira (34)";
-                            segTurnGov2 = "Jorge da Silva (20)";
-                        }
+                        segTurnGov1 = "Jorge da Silva (20)";
+                        segTurnGov2 = "Caio César Moreira (34)";
                     }
 
                     if (validosGov1 == validosGov3 && validosGov1 > validosGov2) {
 
-                        if (idadeGov1 > idadeGov3) {
-                            segTurnGov1 = "Jorge da Silva (20)";
-                            segTurnGov2 = "Luana Hernandez (74)";
-                        }
-
-                        else {
-                            segTurnGov1 = "Luana Hernandez (74)";
-                            segTurnGov2 = "Jorge da Silva (20)";
-                        }
+                        segTurnGov1 = "Jorge da Silva (20)";
+                        segTurnGov2 = "Luana Hernandez (74)";
                     }
 
                     if (validosGov2 == validosGov3 && validosGov2 > validosGov1) {
 
-                        if (idadeGov2 > idadeGov3) {
-                            segTurnGov1 = "Caio César Moreira (34)";
-                            segTurnGov2 = "Luana Hernandez (74)";
-                        }
-
-                        else {
-                            segTurnGov1 = "Luana Hernandez (74)";
-                            segTurnGov2 = "Caio César Moreira (34)";
-                        }
+                        segTurnGov1 = "Caio César Moreira (34)";
+                        segTurnGov2 = "Luana Hernandez (74)";
                     }
 
                     // Situação em que um candidato possui mais voto que os demais.
@@ -359,43 +338,23 @@ int main()
                     // Situação caso dois candidatos tenham a mesma quantidade de votos (maior que o terceiro).
                     if (validosPres1 == validosPres2 && validosPres1 > validosPres3) {
 
-                        if (idadePres1 > idadePres2) {
-                            segTurnPres1 = "Renato Junior (20)";
-                            segTurnPres2 = "Agenor Brasil (34)";
-                        }
-
-                        else {
-                            segTurnPres1 = "Agenor Brasil (34)";
-                            segTurnPres2 = "Renato Junior (20)";
-                        }
+                        segTurnPres1 = "Renato Junior (20)";
+                        segTurnPres2 = "Agenor Brasil (34)";
                     }
 
                     if (validosPres1 == validosPres3 && validosPres1 > validosPres2) {
 
-                        if (idadePres1 > idadePres3) {
-                            segTurnPres1 = "Renato Junior (20)";
-                            segTurnPres2 = "Ednaldo Pereira (74)";
-                        }
-
-                        else {
-                            segTurnPres1 = "Ednaldo Pereira (74)";
-                            segTurnPres2 = "Renato Junior (20)";
-                        }
+                        segTurnPres1 = "Renato Junior (20)";
+                        segTurnPres2 = "Ednaldo Pereira (74)";
                     }
 
                     if (validosPres2 == validosPres3 && validosPres2 > validosPres1) {
 
-                        if (idadePres2 > idadePres3) {
-                            segTurnPres1 = "Agenor Brasil (34)";
-                            segTurnPres2 = "Ednaldo Pereira (74)";
-                        }
-
-                        else {
-                            segTurnPres1 = "Ednaldo Pereira (74)";
-                            segTurnPres2 = "Agenor Brasil (34)";
-                        }
+                        segTurnPres1 = "Agenor Brasil (34)";
+                        segTurnPres2 = "Ednaldo Pereira (74)";
                     }
 
+                    // Situação em que um candidato possui mais voto que os demais.
                     if (validosPres1 > validosPres2 && validosPres1 > validosPres3) {
                         segTurnPres1 = "Renato Junior (20)";
 
@@ -417,7 +376,6 @@ int main()
                         }
                     }
 
-                    // Situação em que um candidato possui mais voto que os demais.
                     if (validosPres2 > validosPres1 && validosPres2 > validosPres3) {
                         segTurnPres1 = "Agenor Brasil (34)";
 
@@ -529,7 +487,7 @@ int main()
         // Início da votação (caso os dígitos verificadores inseridos no CPF correspondam ao resultado da verificação matemática).
         if (digito1 == digVerif1 && digito2 == digVerif2) {
 
-            system("clear");
+            system("CLS");
 
             cout << "VOTAÇÃO INICIADA. \n" << endl;
 
@@ -548,7 +506,7 @@ int main()
             else if (votoGov == 0) { contGovBranco++; }
             else { contGovNulo++; }
 
-            system("clear");
+            system("CLS");
 
             cout << "Escolha um candidato a PRESIDENTE: \n" << endl;
             cout << "Renato Junior (20)" << endl;
@@ -568,16 +526,13 @@ int main()
             // Contagem de eleitores.
             contEleitores++;
 
-            system("clear");
-
-            // Booleano que valida a condição while e volta ao início, permitindo que um novo eleitor vote.
-            volteAoInicio = true;
+            system("CLS");
         }
 
         // Condição caso o CPF seja inválido.
         else {
             cout << "CPF inválido, insira novamente: \n" << endl;
-            volteAoInicio = true;
         }
+
     } while (volteAoInicio == true);
 }

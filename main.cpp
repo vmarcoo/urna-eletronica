@@ -147,7 +147,7 @@ int main()
                 cout << "------------------------------------------------------------------------------------------------ \n" << endl;
             }
 
-            // Condições para o segundo turno (qualquer candidato com 50% ou menos de votos válidos).
+            // Condições para o segundo turno (todos os candidatos com 50% ou menos de votos válidos).
             if (validosGov1 <= 50 && validosGov2 <= 50 && validosGov3 <= 50) {
 
                 // Situação caso só haja votos brancos e/ou nulos.

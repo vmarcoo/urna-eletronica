@@ -442,11 +442,11 @@ int main()
             return 0;
         }
 
-        int digito1;
-        int digito2;
+        int digito1; // Primeiro dígito verificador gerado através da validação matemática.
+        int digito2; // Segundo dígito verificador gerado através da validação matemática.
         int digVerif = CPF % 100; // Dígito verificador do CPF.
-        int digVerif1 = digVerif / 10; // Primeiro dígito verificador do CPF.
-        int digVerif2 = digVerif % 10; // Segundo dígito verificador do CPF.
+        int digVerif1 = digVerif / 10; // Primeiro dígito verificador do CPF inserido pelo eleitor.
+        int digVerif2 = digVerif % 10; // Segundo dígito verificador do CPF inserido pelo eleitor.
         long long novoCPF = CPF / 100; // CPF sem o dígito verificador.
 
         // Cálculos para separação dos dígitos do CPF.

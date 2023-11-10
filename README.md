@@ -13,6 +13,7 @@ https://github.com/laurafheckmann
 INSTRUÇÕES: 
 
 1) Trata-se de um console application extremamente simples.
-2) Crie um projeto em sua IDE de preferência para console application em C++.
-3) Substitua o arquivo main.cpp da sua máquina pelo arquivo main.cpp deste repositório.
-4) Caso esteja utilizando Linux, altere todos os comandos system("CLS") para system("clear").
+2) Leia as orientações do projeto, presentes no PDF anexo a este repositório.
+3) Crie um projeto em sua IDE de preferência para console application em C++.
+4) Substitua o arquivo main.cpp da sua máquina pelo arquivo main.cpp deste repositório.
+5) Caso esteja utilizando Linux, altere todos os comandos system("CLS") para system("clear").

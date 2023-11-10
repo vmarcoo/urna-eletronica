@@ -92,7 +92,7 @@ int main()
             string segTurnPres1;
             string segTurnPres2;
 
-            system("CLS");
+            system("clear");
             cout << "------------------------------------------------------------------------------------------------ \n" << endl;
             cout << "VOTAÇÃO FINALIZADA. \n" << endl;
             cout << "Total de eleitores: " << contEleitores << "\n" << endl;
@@ -130,20 +130,6 @@ int main()
 
                 cout << govEleito << endl;
                 cout << " " << endl;
-                cout << "------------------------------------------------------------------------------------------------ \n" << endl;
-            }
-
-            if (validosPres1 > 50 || validosPres2 > 50 || validosPres3 > 50) {
-                string presEleito;
-
-                cout << "RESULTADO - PRESIDENTE: \n" << endl;
-                cout << "Não haverá segundo turno - Candidato ELEITO: \n" << endl;
-
-                if (validosPres1 > 50) { presEleito = "Renato Junior (20)"; }
-                if (validosPres2 > 50) { presEleito = "Agenor Brasil (34)"; }
-                if (validosPres3 > 50) { presEleito = "Ednaldo Pereira (74)"; }
-
-                cout << presEleito << "\n" << endl;
                 cout << "------------------------------------------------------------------------------------------------ \n" << endl;
             }
 
@@ -286,22 +272,33 @@ int main()
                 }
             }
 
-            // Condições para o segundo turno (qualquer candidato com 50% ou menos de votos válidos).
+            // Mesma validação, porém agora para presidente.
+            if (validosPres1 > 50 || validosPres2 > 50 || validosPres3 > 50) {
+                string presEleito;
+
+                cout << "RESULTADO - PRESIDENTE: \n" << endl;
+                cout << "Não haverá segundo turno - Candidato ELEITO: \n" << endl;
+
+                if (validosPres1 > 50) { presEleito = "Renato Junior (20)"; }
+                if (validosPres2 > 50) { presEleito = "Agenor Brasil (34)"; }
+                if (validosPres3 > 50) { presEleito = "Ednaldo Pereira (74)"; }
+
+                cout << presEleito << "\n" << endl;
+                cout << "------------------------------------------------------------------------------------------------ \n" << endl;
+            }
+
             if (validosPres1 <= 50 && validosPres2 <= 50 && validosPres3 <= 50) {
 
-                // Situação caso só haja votos brancos e/ou nulos.
                 if (validosPres1 == 0 && validosPres2 == 0 && validosPres3 == 0) {
                     cout << "RESULTADO - PRESIDENTE: \n" << endl;
                     cout << "Votação inconclusiva - Não há votos válidos. \n" << endl;
                     cout << "------------------------------------------------------------------------------------------------ \n" << endl;
                 }
 
-                // Segundo turno propriamente dito.
                 else {
                     cout << "RESULTADO - PRESIDENTE: \n" << endl;
                     cout << "Haverá segundo turno - Os candidatos que concorrerão a PRESIDENTE são: \n" << endl;
 
-                    // Situação caso todos tenham a mesma quantidade de votos (validação por idade).
                     if (validosPres1 == validosPres2 && validosPres1 == validosPres3) {
 
                         if (idadePres1 > idadePres2 && idadePres1 > idadePres3) {
@@ -335,7 +332,6 @@ int main()
                         }
                     }
 
-                    // Situação caso dois candidatos tenham a mesma quantidade de votos (maior que o terceiro).
                     if (validosPres1 == validosPres2 && validosPres1 > validosPres3) {
 
                         segTurnPres1 = "Renato Junior (20)";
@@ -354,7 +350,6 @@ int main()
                         segTurnPres2 = "Ednaldo Pereira (74)";
                     }
 
-                    // Situação em que um candidato possui mais voto que os demais.
                     if (validosPres1 > validosPres2 && validosPres1 > validosPres3) {
                         segTurnPres1 = "Renato Junior (20)";
 
@@ -487,7 +482,7 @@ int main()
         // Início da votação (caso os dígitos verificadores inseridos no CPF correspondam ao resultado da verificação matemática).
         if (digito1 == digVerif1 && digito2 == digVerif2) {
 
-            system("CLS");
+            system("clear");
 
             cout << "VOTAÇÃO INICIADA. \n" << endl;
 
@@ -506,7 +501,7 @@ int main()
             else if (votoGov == 0) { contGovBranco++; }
             else { contGovNulo++; }
 
-            system("CLS");
+            system("clear");
 
             cout << "Escolha um candidato a PRESIDENTE: \n" << endl;
             cout << "Renato Junior (20)" << endl;
@@ -526,7 +521,7 @@ int main()
             // Contagem de eleitores.
             contEleitores++;
 
-            system("CLS");
+            system("clear");
         }
 
         // Condição caso o CPF seja inválido.

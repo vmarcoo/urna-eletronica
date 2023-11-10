@@ -92,7 +92,7 @@ int main()
             string segTurnPres1;
             string segTurnPres2;
 
-            system("clear");
+            system("CLS");
             cout << "------------------------------------------------------------------------------------------------ \n" << endl;
             cout << "VOTAÇÃO FINALIZADA. \n" << endl;
             cout << "Total de eleitores: " << contEleitores << "\n" << endl;
@@ -482,7 +482,7 @@ int main()
         // Início da votação (caso os dígitos verificadores inseridos no CPF correspondam ao resultado da verificação matemática).
         if (digito1 == digVerif1 && digito2 == digVerif2) {
 
-            system("clear");
+            system("CLS");
 
             cout << "VOTAÇÃO INICIADA. \n" << endl;
 
@@ -501,7 +501,7 @@ int main()
             else if (votoGov == 0) { contGovBranco++; }
             else { contGovNulo++; }
 
-            system("clear");
+            system("CLS");
 
             cout << "Escolha um candidato a PRESIDENTE: \n" << endl;
             cout << "Renato Junior (20)" << endl;
@@ -521,7 +521,7 @@ int main()
             // Contagem de eleitores.
             contEleitores++;
 
-            system("clear");
+            system("CLS");
         }
 
         // Condição caso o CPF seja inválido.

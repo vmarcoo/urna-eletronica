@@ -17,3 +17,5 @@ INSTRUÇÕES:
 3) Crie um projeto em sua IDE de preferência para console application em C++.
 4) Substitua o arquivo main.cpp da sua máquina pelo arquivo main.cpp deste repositório.
 5) Caso esteja utilizando Linux, altere todos os comandos system("CLS") para system("clear").
+6) Compile e execute o código.
+7) Aproveite!
